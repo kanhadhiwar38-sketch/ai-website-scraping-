@@ -1,0 +1,12 @@
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: webrecon-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - webrecon-redis-data:/data
+    restart: unless-stopped
+
+volumes:
+  webrecon-redis-data:
