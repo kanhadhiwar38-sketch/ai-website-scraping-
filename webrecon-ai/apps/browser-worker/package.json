@@ -1,0 +1,39 @@
+{
+  "name": "@webrecon/browser-worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@webrecon/types": "workspace:*",
+    "@webrecon/shared": "workspace:*",
+    "@webrecon/firebase": "workspace:*",
+    "@webrecon/logger": "workspace:*",
+    "@webrecon/security": "workspace:*",
+    "@webrecon/jobs": "workspace:*",
+    "@webrecon/crawler": "workspace:*",
+    "@webrecon/network-inspector": "workspace:*",
+    "@webrecon/asset-analyzer": "workspace:*",
+    "@webrecon/screenshot-engine": "workspace:*",
+    "@webrecon/responsive-analyzer": "workspace:*",
+    "@webrecon/browser": "workspace:*",
+    "bullmq": "^5.28.1",
+    "playwright": "^1.48.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "tsx": "^4.19.2",
+    "vitest": "^2.1.4",
+    "@types/node": "^22.9.0",
+    "eslint": "^9.14.0",
+    "@eslint/js": "^9.14.0",
+    "typescript-eslint": "^8.13.0"
+  }
+}
